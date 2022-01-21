@@ -51,7 +51,7 @@ RUN apt update && \
     chown -R "$APP_USER":"$APP_USER" "$WEB_DIR" "$FFMPEG_DIR" "$DATA_DIR" "$CACHE_DIR" "$CONF_DIR"
 
 #      HTTP     HTTPS    SERVICE-DISCOVERY CLIENT-DISCOVERY
-EXPOSE 8096/tcp 8920/tcp 1900/udp          7359/udp
+EXPOSE 8080/tcp 453/tcp 1900/udp          7359/udp
 
 USER "$APP_USER"
 ENV WEB_DIR="$WEB_DIR" \
