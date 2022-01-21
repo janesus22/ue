@@ -60,7 +60,7 @@ ENV WEB_DIR="$WEB_DIR" \
     CACHE_DIR="$CACHE_DIR" \
     CONF_DIR="$CONF_DIR"
 ENTRYPOINT  [ "exec", \ 
-                "/usr/share/jellyfin", \ 
+                "/usr/share/jellyfin.service", \ 
                 "--service", \
                 "--webdir", "/usr/share/jellyfin/web", \
                 "--ffmpeg", "/usr/lib/jellyfin-ffmpeg/ffmpeg", \
