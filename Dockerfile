@@ -53,8 +53,6 @@ RUN apt update && \
 #      HTTP     HTTPS    SERVICE-DISCOVERY CLIENT-DISCOVERY
 EXPOSE 8080/tcp 453/tcp 1900/udp          7359/udp
 
-COPY /usr/share/jellyfin.service /data/jellyfin.service
-
 USER "$APP_USER"
 ENV WEB_DIR="$WEB_DIR" \
     FFMPEG_DIR="$FFMPEG_DIR" \
