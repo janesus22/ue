@@ -61,11 +61,10 @@ ENV WEB_DIR="$WEB_DIR" \
     DATA_DIR="$DATA_DIR" \
     CACHE_DIR="$CACHE_DIR" \
     CONF_DIR="$CONF_DIR"
-ENTRYPOINT  [ "exec", \ 
-                "/data/jellyfin.service", \ 
-                "--service", \
-                "--webdir", "/usr/share/jellyfin/web", \
-                "--ffmpeg", "/usr/lib/jellyfin-ffmpeg/ffmpeg", \
-                "--datadir", "/var/lib/jellyfin", \
-                "--cachedir", "/var/cache/jellyfin", \
-                "--configdir" ,"/etc/jellyfin"]
+ENTRYPOINT exec jellyfin \
+                --service \
+                --webdir "$WEB_DIR" \
+                --ffmpeg "$FFMPEG_DIR" \
+                --datadir "$DATA_DIR" \
+                --cachedir "$CACHE_DIR" \
+                --configdir "$CONF_DIR"
