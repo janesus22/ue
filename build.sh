@@ -30,8 +30,8 @@ case "${1-}" in
 			--rm \
 			--tty \
 			--interactive \
-			--publish 8096:8096/tcp \
-			--publish 8920:8920/tcp \
+			--publish 8080:8080/tcp \
+			--publish 443:443/tcp \
 			--publish 1900:1900/udp \
 			--publish 7359:7359/udp \
 			--mount type=bind,source=/etc/localtime,target=/etc/localtime,readonly \
